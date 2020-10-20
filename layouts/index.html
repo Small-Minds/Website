@@ -1,10 +1,16 @@
 {{ define "main" }}
-<link rel="preload" href="pictures/small-minds-min.png" />
+<link rel="preload" href="pictures/small-minds-min.png" as="small-minds-min" />
+
 <main>
+  <h1 id="page-title">Small Minds</h1>
+  <h2 id="page-subtitle">Software Development</h2>
   <img
     id="small-minds-image"
     alt="Small Minds Logo"
     src="pictures/small-minds-min.png"
   />
+  <a target="_blank" href="https://github.com/Small-Minds">
+    <h3 id="gh-link">Github</h3>
+  </a>
 </main>
 {{end}}
