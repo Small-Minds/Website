@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="Description" content={pageProps.description}></meta>
       </Head>
       <Box height={{ min: "100vh" }}>
-        <Header background="primary" pad="small" style={headerStyle}>
+        <Header background="white" pad="small" style={headerStyle}>
           <Box direction="row" pad="small">
             <Anchor as={Link} href="/" label="SM" color="primary" />
           </Box>
