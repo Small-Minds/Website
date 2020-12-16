@@ -1,4 +1,5 @@
 import { Box, Heading, Paragraph, Image, WorldMap, Anchor } from "grommet";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -23,10 +24,15 @@ export default function Contact() {
           </Box>
           <Paragraph>
             North America:{" "}
-            <Anchor label="Ryan Fleck" href="/members/ryan-fleck/" />
+            <Anchor as={Link} label="Ryan Fleck" href="/members/ryan-fleck/" />
           </Paragraph>
           <Paragraph>
-            Asia: <Anchor label="Mengxuan Chen" href="/members/mengxuan-chen" />
+            Asia:{" "}
+            <Anchor
+              as={Link}
+              label="Mengxuan Chen"
+              href="/members/mengxuan-chen"
+            />
           </Paragraph>
         </Box>
       </Box>

@@ -20,9 +20,12 @@ export default function Members(props) {
           {memberList.map((m, i) => (
             <Box key={i} margin="small">
               <Heading level={3} margin="none">
-                <Link href={`/members/${slugify(m.title, slugConfig)}`}>
+                <Anchor
+                  as={Link}
+                  href={`/members/${slugify(m.title, slugConfig)}`}
+                >
                   {m.title}
-                </Link>
+                </Anchor>
               </Heading>
               <Paragraph>{m.role}</Paragraph>
             </Box>

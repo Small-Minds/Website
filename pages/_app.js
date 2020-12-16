@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import SmallMindsTheme from "../styles/theme.json";
 import Head from "next/head";
 import { useState } from "react";
+import Link from "next/link";
 
 const headerStyle = { position: "sticky", top: 0 };
 
@@ -21,16 +22,20 @@ function MyApp({ Component, pageProps }) {
       <Box height={{ min: "100vh" }}>
         <Header background="primary" pad="small" style={headerStyle}>
           <Box direction="row" pad="small">
-            <Anchor href="/" label="SM" color="primary" />
+            <Anchor as={Link} href="/" label="SM" color="primary" />
           </Box>
           <Nav direction="row" pad="small">
             <Menu
               label="Menu"
               items={[
-                { label: "Articles", href: "/articles" },
-                { label: "Contact", href: "/contact" },
-                { label: "Members", href: "/members" },
-                { label: "GitHub", href: "https://github.com/small-minds" },
+                { label: "Articles", href: "/articles", as: Link },
+                { label: "Contact", href: "/contact", as: Link },
+                { label: "Members", href: "/members", as: Link },
+                {
+                  label: "GitHub",
+                  href: "https://github.com/small-minds",
+                  as: Link,
+                },
                 {
                   label: `${darkMode ? "Day Mode" : "Night Mode"}`,
                   onClick: () => {
@@ -39,7 +44,7 @@ function MyApp({ Component, pageProps }) {
                   },
                 },
               ]}
-            />
+            ></Menu>
           </Nav>
         </Header>
         <Component {...pageProps} />
