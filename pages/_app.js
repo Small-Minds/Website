@@ -1,6 +1,6 @@
 import { Anchor, Grommet, Header, Nav, Box, Menu } from "grommet";
 import "../styles/globals.css";
-import { theme } from "../styles/theme.js";
+import SmallMindsTheme from "../styles/theme.json";
 import Head from "next/head";
 import { useState } from "react";
 
@@ -10,10 +10,13 @@ function MyApp({ Component, pageProps }) {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <Grommet theme={theme} themeMode={darkMode ? "dark" : "light"}>
+    <Grommet theme={SmallMindsTheme} themeMode={darkMode ? "dark" : "light"}>
       <Head>
-        <title>Small Minds</title>
+        <title>{pageProps.title}</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <meta name="Description" content={pageProps.description}></meta>
       </Head>
       <Box height={{ min: "100vh" }}>
         <Header background="primary" pad="small" style={headerStyle}>
@@ -46,3 +49,19 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
+/**
+ * getStaticProps getStaticProps is Nextjs Function which we can call from our page.
+ * It will return the props to our component. just like we have props to our index
+ */
+
+export async function getStaticProps() {
+  const siteData = await import(`../config.json`);
+
+  return {
+    props: {
+      title: siteData.default.title,
+      description: siteData.default.description,
+    },
+  };
+}

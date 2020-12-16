@@ -22,10 +22,11 @@ export default function Contact() {
             />
           </Box>
           <Paragraph>
-            North America: <Anchor label="Ryan Fleck" />
+            North America:{" "}
+            <Anchor label="Ryan Fleck" href="/members/ryan-fleck/" />
           </Paragraph>
           <Paragraph>
-            Asia: <Anchor label="Mengxuan Chen" />
+            Asia: <Anchor label="Mengxuan Chen" href="/members/mengxuan-chen" />
           </Paragraph>
         </Box>
       </Box>
