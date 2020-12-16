@@ -1,12 +1,8 @@
 ---
 title: Ryan Fleck
-role: Backend Engineer
+role: Computer Engineer, uOttawa '21
 ---
 
-# h1
+Hey, I'm Ryan.
 
-## h2
-
-### h3
-
-Normal text
+I run _Small Minds_ and write the backend for _Democracy_.

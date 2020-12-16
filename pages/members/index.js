@@ -18,12 +18,13 @@ export default function Members(props) {
         <Box width="large" pad="medium" align="center">
           <Heading>Members</Heading>
           {memberList.map((m, i) => (
-            <Box key={i}>
-              <Paragraph>
+            <Box key={i} margin="small">
+              <Heading level={3} margin="none">
                 <Link href={`/members/${slugify(m.title, slugConfig)}`}>
-                  {`${m.title} - ${m.role}`}
+                  {m.title}
                 </Link>
-              </Paragraph>
+              </Heading>
+              <Paragraph>{m.role}</Paragraph>
             </Box>
           ))}
         </Box>
