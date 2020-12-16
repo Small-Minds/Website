@@ -49,7 +49,7 @@ export async function getStaticProps({ params: { slug } }) {
 
   return {
     props: {
-      content: `# ${data.title}\n${content}`,
+      content: content,
       data: data,
     },
   };

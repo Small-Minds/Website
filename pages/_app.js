@@ -1,4 +1,5 @@
 import { Anchor, Grommet, Header, Nav, Box, Menu } from "grommet";
+import { ContactInfo } from "grommet-icons";
 import "../styles/globals.css";
 import SmallMindsTheme from "../styles/theme.json";
 import Head from "next/head";
@@ -22,18 +23,21 @@ function MyApp({ Component, pageProps }) {
       <Box height={{ min: "100vh" }}>
         <Header background="white" pad="small" style={headerStyle}>
           <Box direction="row" pad="small">
-            <Anchor as={Link} href="/" label="SM" color="primary" />
+            <Link href="/">
+              <Anchor label="SM" color="primary" />
+            </Link>
           </Box>
           <Box direction="row" pad="small">
             <Nav direction="row">
-              <Anchor as={Link} href="/articles" label="Articles" />
-              <Anchor as={Link} href="/contact" label="Contact" />
-              <Anchor as={Link} href="/members" label="Members" />
-              <Anchor
-                as={Link}
-                href="https://github.com/small-minds"
-                label="GitHub"
-              />
+              <Link href="/contact">
+                <Anchor label="Contact" />
+              </Link>
+              <Link href="/members">
+                <Anchor label="Members" />
+              </Link>
+              <Link href="/articles">
+                <Anchor label="Articles" />
+              </Link>
             </Nav>
           </Box>
         </Header>
