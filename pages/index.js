@@ -5,8 +5,7 @@ export default function Home() {
   return (
     <Box>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Small Minds Software</title>
       </Head>
       <Box align="center" height={{ min: "100%" }} margin="large">
         <Box width="large" pad="medium" align="center">
