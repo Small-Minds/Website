@@ -20,7 +20,7 @@ export default function Articles(props) {
           {list.map((m, i) => (
             <Box key={i} margin="small">
               <Heading level={3} margin="none">
-                <Link href={`/articles/${slugify(m.title, slugConfig)}`}>
+                <Link href={`/articles/${slugify(m.title || "", slugConfig)}`}>
                   {m.title}
                 </Link>
               </Heading>
@@ -38,7 +38,9 @@ export async function getStaticProps() {
   const siteData = await import(`../../config.json`);
   const fs = require("fs");
   const files = fs.readdirSync(`${process.cwd()}/content/articles/`, "utf-8");
-  const members = files.filter((fn) => fn.endsWith(".md"));
+  const members = files
+    .filter((fn) => fn.endsWith(".md"))
+    .filter((f) => !f.includes("undefined"));
   const data = members.map((blog) => {
     const path = `${process.cwd()}/content/articles/${blog}`;
     const rawContent = fs.readFileSync(path, {

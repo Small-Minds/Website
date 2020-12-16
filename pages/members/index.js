@@ -22,7 +22,7 @@ export default function Members(props) {
               <Heading level={3} margin="none">
                 <Anchor
                   as={Link}
-                  href={`/members/${slugify(m.title, slugConfig)}`}
+                  href={`/members/${slugify(m.title || "", slugConfig)}`}
                 >
                   {m.title}
                 </Anchor>
@@ -40,7 +40,9 @@ export async function getStaticProps() {
   const siteData = await import(`../../config.json`);
   const fs = require("fs");
   const files = fs.readdirSync(`${process.cwd()}/content/members/`, "utf-8");
-  const members = files.filter((fn) => fn.endsWith(".md"));
+  const members = files
+    .filter((fn) => fn.endsWith(".md"))
+    .filter((f) => !f.includes("undefined"));
   const data = members.map((blog) => {
     const path = `${process.cwd()}/content/members/${blog}`;
     const rawContent = fs.readFileSync(path, {
