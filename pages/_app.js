@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
       <Box height={{ min: "100vh" }}>
         <Header background="primary" pad="small" style={headerStyle}>
           <Box direction="row" pad="small">
-            <Anchor href="/" label="Small Minds" color="primary" />
+            <Anchor href="/" label="SM" color="primary" />
           </Box>
           <Nav direction="row" pad="small">
             <Menu
