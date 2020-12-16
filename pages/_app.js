@@ -25,16 +25,16 @@ function MyApp({ Component, pageProps }) {
             <Anchor as={Link} href="/" label="SM" color="primary" />
           </Box>
           <Nav direction="row" pad="small">
+            {/** Could pass as:Link, but breaks React? */}
             <Menu
               label="Menu"
               items={[
-                { label: "Articles", href: "/articles", as: Link },
-                { label: "Contact", href: "/contact", as: Link },
-                { label: "Members", href: "/members", as: Link },
+                { label: "Articles", href: "/articles" },
+                { label: "Contact", href: "/contact" },
+                { label: "Members", href: "/members" },
                 {
                   label: "GitHub",
                   href: "https://github.com/small-minds",
-                  as: Link,
                 },
                 {
                   label: `${darkMode ? "Day Mode" : "Night Mode"}`,
