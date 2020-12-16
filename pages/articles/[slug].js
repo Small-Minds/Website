@@ -24,10 +24,33 @@ export default function Member({ content, data }) {
   );
 }
 
-Member.getInitialProps = async (context) => {
-  const { article } = context.query;
+export async function getStaticPaths(article) {
+  const fs = require("fs");
+  const files = fs.readdirSync(`${process.cwd()}/content/articles`, "utf-8");
+  const paths = files.map((filename) => ({
+    params: {
+      slug: filename.replace(".md", ""),
+    },
+  }));
 
-  const content = await import(`../../content/articles/${article}.md`);
-  const data = matter(content.default);
-  return { ...data };
-};
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params: { slug } }) {
+  const fs = require("fs");
+  const markdownWithMetadata = fs
+    .readFileSync(`${process.cwd()}/content/articles/${slug}.md`)
+    .toString();
+
+  const { data, content } = matter(markdownWithMetadata);
+
+  return {
+    props: {
+      content: `# ${data.title}\n${content}`,
+      data: data,
+    },
+  };
+}
