@@ -2,6 +2,7 @@ import { Box, Heading, Paragraph, Image } from "grommet";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
+import { useEffect } from "react";
 
 export default function Member({ content, data }) {
   // Syntax highlighting.

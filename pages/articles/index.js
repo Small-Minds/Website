@@ -16,12 +16,12 @@ export default function Articles(props) {
     <Box>
       <Box align="center" height={{ min: "100%" }} margin="large">
         <Box width="large" pad="medium" align="center">
-          <Heading>Articles</Heading>
+          <Heading size="large">Articles</Heading>
           {list.map((m, i) => (
             <Box key={i} margin="small">
               <Heading level={3} margin="none">
                 <Link href={`/articles/${slugify(m.title || "", slugConfig)}`}>
-                  {m.title}
+                  <Anchor>{m.title}</Anchor>
                 </Link>
               </Heading>
               <Paragraph margin={{ bottom: "none" }}>{m.date}</Paragraph>

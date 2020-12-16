@@ -13,7 +13,7 @@ export default function Home() {
             Small Minds
           </Heading>
           <Box height="medium" width={{ max: "medium" }}>
-            <Image fit="cover" src="/pictures/small-minds-round-min.png" />
+            <Image fit="cover" src="/pictures/small-minds-min.png" />
           </Box>
           <Paragraph
             size="large"

@@ -6,7 +6,7 @@ export default function Contact() {
     <Box>
       <Box align="center" height={{ min: "100%" }} margin="large">
         <Box width="large" pad="medium" align="center">
-          <Heading>Contact</Heading>
+          <Heading size="large">Contact</Heading>
           <Box height="medium" width="large" align="center" pad="small">
             <WorldMap
               color="light-5"

@@ -16,16 +16,13 @@ export default function Members(props) {
     <Box>
       <Box align="center" height={{ min: "100%" }} margin="large">
         <Box width="large" pad="medium" align="center">
-          <Heading>Members</Heading>
+          <Heading size="large">Members</Heading>
           {memberList.map((m, i) => (
             <Box key={i} margin="small">
               <Heading level={3} margin="none">
-                <Anchor
-                  as={Link}
-                  href={`/members/${slugify(m.title || "", slugConfig)}`}
-                >
-                  {m.title}
-                </Anchor>
+                <Link href={`/members/${slugify(m.title || "", slugConfig)}`}>
+                  <Anchor>{m.title}</Anchor>
+                </Link>
               </Heading>
               <Paragraph>{m.role}</Paragraph>
             </Box>
