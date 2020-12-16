@@ -24,28 +24,18 @@ function MyApp({ Component, pageProps }) {
           <Box direction="row" pad="small">
             <Anchor as={Link} href="/" label="SM" color="primary" />
           </Box>
-          <Nav direction="row" pad="small">
-            {/** Could pass as:Link, but breaks React? */}
-            <Menu
-              label="Menu"
-              items={[
-                { label: "Articles", href: "/articles" },
-                { label: "Contact", href: "/contact" },
-                { label: "Members", href: "/members" },
-                {
-                  label: "GitHub",
-                  href: "https://github.com/small-minds",
-                },
-                {
-                  label: `${darkMode ? "Day Mode" : "Night Mode"}`,
-                  onClick: () => {
-                    console.log("Dark Mode");
-                    setDarkMode(!darkMode);
-                  },
-                },
-              ]}
-            ></Menu>
-          </Nav>
+          <Box direction="row" pad="small">
+            <Nav direction="row">
+              <Anchor as={Link} href="/articles" label="Articles" />
+              <Anchor as={Link} href="/contact" label="Contact" />
+              <Anchor as={Link} href="/members" label="Members" />
+              <Anchor
+                as={Link}
+                href="https://github.com/small-minds"
+                label="GitHub"
+              />
+            </Nav>
+          </Box>
         </Header>
         <Component {...pageProps} />
       </Box>
