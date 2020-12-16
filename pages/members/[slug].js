@@ -18,7 +18,7 @@ export default function Member({ content, data }) {
   return (
     <Box>
       <Head>
-        <title>Small Minds Software</title>
+        <title>{data.title}</title>
       </Head>
       <Box align="center" height={{ min: "100%" }} margin="large">
         <Box width="large" pad="medium">
