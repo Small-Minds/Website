@@ -24,15 +24,15 @@ export default function Contact() {
           </Box>
           <Paragraph>
             North America:{" "}
-            <Anchor as={Link} label="Ryan Fleck" href="/members/ryan-fleck/" />
+            <Link href="/members/ryan-fleck/">
+              <Anchor label="Ryan Fleck" />
+            </Link>
           </Paragraph>
           <Paragraph>
             Asia:{" "}
-            <Anchor
-              as={Link}
-              label="Mengxuan Chen"
-              href="/members/mengxuan-chen"
-            />
+            <Link href="/members/mengxuan-chen">
+              <Anchor label="Mengxuan Chen" />
+            </Link>
           </Paragraph>
         </Box>
       </Box>
