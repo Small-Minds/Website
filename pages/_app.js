@@ -35,9 +35,6 @@ function MyApp({ Component, pageProps }) {
               <Link href="/members">
                 <Anchor label="Members" />
               </Link>
-              <Link href="/articles">
-                <Anchor label="Articles" />
-              </Link>
             </Nav>
           </Box>
         </Header>
