@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'musicnet';
+  src: url('/MUSICNET.ttf');
+}
+
+html{
+  background: black;
+  color: #FFA;
+  text-shadow: 0 0 10px #FF0;
+  font-family: 'musicnet';
+  font-size: 8vw;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: middle;
+  height: 90vh;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  transition: color 0.5s, text-shadow 0.5s;
+}
+
+p:hover {
+  text-shadow: 0 0 15px #FF8;
+  color: white;
+}
+
+#small {
+  font-size: 0.3em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
