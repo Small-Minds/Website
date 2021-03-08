@@ -11,12 +11,20 @@ html {
   font-size: 9vw;
 }
 
+html,
+body,
+div {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: middle;
-  height: 90vh;
+  height: 100vh;
 }
 
 p {
@@ -34,4 +42,9 @@ a {
 a:hover {
   text-shadow: 0 0 2vw #ff8;
   color: white;
+}
+
+a:hover#bad {
+  text-shadow: 0 0 2vw red;
+  color: #F33;
 }
