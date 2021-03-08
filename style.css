@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'musicnet';
-  src: url('/MUSICNET.ttf');
+  font-family: "musicnet";
+  src: url("/MUSICNET.ttf");
 }
 
-html{
+html {
   background: black;
-  color: #FFA;
-  text-shadow: 0 0 10px #FF0;
-  font-family: 'musicnet';
-  font-size: 8vw;
+  color: #ffa;
+  text-shadow: 0 0 1vw #ff0;
+  font-family: "musicnet";
+  font-size: 9vw;
 }
 
 div {
@@ -23,20 +23,15 @@ p {
   padding: 0;
   margin: 0;
   text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
   transition: color 0.5s, text-shadow 0.5s;
 }
 
-p:hover {
-  text-shadow: 0 0 15px #FF8;
+a:hover {
+  text-shadow: 0 0 2vw #ff8;
   color: white;
-}
-
-#small {
-  font-size: 0.3em;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-a{
-  color: white;
-  text-decoration: none;
 }
